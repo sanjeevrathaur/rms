@@ -29,9 +29,6 @@ public class Job {
 	
 	private String experience;
 	
-	/** To whom need to drop an email*/
-	/*private String mailTo;*/
-	
 	/** Skills, Certifications, education */
 	private String desiredSkills;
 	

@@ -15,7 +15,7 @@
 <span class="error"></span>
 </c:if>
 </div>
-	<form:form commandName="job" id="job" class="form-horizontal">
+	<form:form commandName="job" name="player" id="player" class="form-horizontal">
 	 <form:hidden path="id" />
 	 
 	 <div class="col-sm-4">
@@ -110,11 +110,6 @@
 		<form:option value="Walk in">Walk in</form:option>
 		</form:select>	 
 	 </div>
-
-<%-- 	 <div class="col-sm-5">
-	 <label>Mail To (Email Id)</label>
-	 <form:input path="mailTo"/>
-	 </div> --%>
 	 
 	 <div class="col-sm-5">	
 	 <label>Enable</label>
