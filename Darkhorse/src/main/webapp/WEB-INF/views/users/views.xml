@@ -13,4 +13,8 @@
 <definition extends="default" name="users/update">
         <put-attribute name="body" value="/WEB-INF/views/users/update.jspx"/>
     </definition>
+<definition extends="adminTemplate" name="users/createUser">
+        <put-attribute name="body" value="/WEB-INF/views/users/createUser.jsp"/>
+    </definition>
+
 </tiles-definitions>
