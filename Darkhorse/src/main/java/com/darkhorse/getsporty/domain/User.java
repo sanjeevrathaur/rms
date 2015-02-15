@@ -30,7 +30,7 @@ public class User {
     @NotNull
     private String passwd;
 
-    private Boolean isEnabled;
+    private Boolean isEnabled = true;
 
     @Column(updatable = false)
     @Temporal(TemporalType.TIMESTAMP)
