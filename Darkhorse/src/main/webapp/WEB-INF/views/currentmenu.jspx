@@ -7,17 +7,9 @@
             <menu:item id="i_user_new" messageCode="global_menu_new" url="/users/create" z="Zv1m8u2rG+JFKcvJ+AHVVK0ey24="/>
             <menu:item id="i_user_list" messageCode="global_menu_list" url="/users?page=1&amp;size=${empty param.size ? 10 : param.size}" z="4MY4uybxa60Q1G2rlI5bOwg+sm0="/>
         </menu:category>
-        <menu:category id="c_userrole" z="C4C1ZBdes4PUIjEM3Ajwwhn1EwA=">
-            <menu:item id="i_userrole_new" messageCode="global_menu_new" url="/userroles?form" z="qYpuuJuPupoYjD8LM0ISnxylj4o="/>
-            <menu:item id="i_userrole_list" messageCode="global_menu_list" url="/userroles?page=1&amp;size=${empty param.size ? 10 : param.size}" z="fTjcT4INZTypLgu+ZHmwzE55ORs="/>
-        </menu:category>
         <menu:category id="c_player" z="cK8M0OPX/OW66GiF/SNgS8vWpjs=">
             <menu:item id="i_player_new" messageCode="global_menu_new" url="/players/createPlayer" z="xCwCGj+PbS/WEOyltkUd6nZ4y4g="/>
             <menu:item id="i_player_list" messageCode="global_menu_list" url="/players?page=1&amp;size=${empty param.size ? 10 : param.size}" z="ZCszNjmNvFu/+xYfzxw5lZP3Y2o="/>
-        </menu:category>
-        <menu:category id="c_event" z="AURyeKTmOObIARXqfI9DXukJNIE=">
-            <menu:item id="i_event_new" messageCode="global_menu_new" url="/events/new" z="BObcRn250Q23VbXG8kWIXR49efE="/>
-            <menu:item id="i_event_list" messageCode="global_menu_list" url="/events?page=1&amp;size=${empty param.size ? 10 : param.size}" z="MxywFHCy64/coyVU05GEg92ERF4="/>
         </menu:category>
         <menu:category id="c_job" z="Spq9e4Ex4B3IMcYI5WfoQsLFC30=">
             <menu:item id="i_job_new" messageCode="global_menu_new" url="/jobs/new" z="LPLNOdNVR7SU3S6Mm86Cya2uODg="/>

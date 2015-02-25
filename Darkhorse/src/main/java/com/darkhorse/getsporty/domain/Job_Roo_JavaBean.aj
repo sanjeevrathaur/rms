@@ -4,7 +4,9 @@
 package com.darkhorse.getsporty.domain;
 
 import com.darkhorse.getsporty.domain.Contact;
+import com.darkhorse.getsporty.domain.Image;
 import com.darkhorse.getsporty.domain.Job;
+import com.darkhorse.getsporty.domain.User;
 import java.util.Date;
 
 privileged aspect Job_Roo_JavaBean {
@@ -73,6 +75,14 @@ privileged aspect Job_Roo_JavaBean {
         this.jobLinks = jobLinks;
     }
     
+    public String Job.getMailTo() {
+        return this.mailTo;
+    }
+    
+    public void Job.setMailTo(String mailTo) {
+        this.mailTo = mailTo;
+    }
+    
     public JobType Job.getJobType() {
         return this.jobType;
     }
@@ -89,6 +99,14 @@ privileged aspect Job_Roo_JavaBean {
         this.modeOfApply = modeOfApply;
     }
     
+    public String Job.getSalary() {
+        return this.salary;
+    }
+    
+    public void Job.setSalary(String salary) {
+        this.salary = salary;
+    }
+    
     public Date Job.getCreated() {
         return this.created;
     }
@@ -103,6 +121,22 @@ privileged aspect Job_Roo_JavaBean {
     
     public void Job.setEnable(boolean enable) {
         this.enable = enable;
+    }
+    
+    public User Job.getCreatedByUser() {
+        return this.createdByUser;
+    }
+    
+    public void Job.setCreatedByUser(User createdByUser) {
+        this.createdByUser = createdByUser;
+    }
+    
+    public Image Job.getLogo() {
+        return this.logo;
+    }
+    
+    public void Job.setLogo(Image logo) {
+        this.logo = logo;
     }
     
 }

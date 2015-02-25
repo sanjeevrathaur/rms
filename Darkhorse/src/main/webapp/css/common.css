@@ -25,3 +25,8 @@ select {
 	margin-top: 10px;
 }
 
+.error {
+	background-color: red !important;
+	color: white !important;
+	
+}

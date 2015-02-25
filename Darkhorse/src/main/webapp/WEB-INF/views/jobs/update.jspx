@@ -14,5 +14,9 @@
         <field:input field="organization" id="c_com_darkhorse_getsporty_domain_Job_organization" z="rCIkkBpHx5CFxdxRdGXiYiZSaHE="/>
         <field:input field="jobLinks" id="c_com_darkhorse_getsporty_domain_Job_jobLinks" z="bWDGN0qh0EXjsOoSF8pBqc1qybo="/>
         <field:input field="experience" id="c_com_darkhorse_getsporty_domain_Job_experience" z="8y0uweM/BrFl1qDLnJ1vHxdh4w0="/>
+        <field:input field="createdByUser" id="c_com_darkhorse_getsporty_domain_Job_createdByUser" z="/XYqJT8x6g9wjDi7KFIBGDyGSzc="/>
+        <field:input field="mailTo" id="c_com_darkhorse_getsporty_domain_Job_mailTo" z="GTT14Mf6GXlK8RDkivSc48Qi798="/>
+        <field:input field="salary" id="c_com_darkhorse_getsporty_domain_Job_salary" z="NeTVf4awTu+5Bf0IUxJSCjAlffA="/>
+        <field:input field="logo" id="c_com_darkhorse_getsporty_domain_Job_logo" z="d4HHE9ys5u/O69YHMr0Dz40OkzE="/>
     </form:update>
 </div>

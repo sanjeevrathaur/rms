@@ -10,7 +10,8 @@
             <table:column id="c_com_darkhorse_getsporty_domain_Player_profileImage" property="profileImage" z="fzxeOjd/aQSOvr9rLloMkdmnyhg="/>
             <table:column id="c_com_darkhorse_getsporty_domain_Player_gallery" property="gallery" z="iB1cUzrxn/sdCBxJEi9Xg5qpTaU="/>
             <table:column id="c_com_darkhorse_getsporty_domain_Player_visibility" property="visibility" z="a6PMFfHZmMGWxmZEnoX2VHid/KI="/>
-            
+            <!-- <table:column id="c_com_darkhorse_getsporty_domain_Player_contact" property="contact" z="0iKPpodvqhFtzlXqxrlTafDVGho="/> -->
+            <table:column id="c_com_darkhorse_getsporty_domain_Player_contact" property="contact" z="0iKPpodvqhFtzlXqxrlTafDVGho="/>
         </table:table>
     </page:list>
 </div>

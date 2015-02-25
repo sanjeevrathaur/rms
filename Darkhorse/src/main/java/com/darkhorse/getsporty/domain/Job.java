@@ -5,6 +5,7 @@ import javax.persistence.Column;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.json.RooJson;
@@ -38,11 +39,16 @@ public class Job {
 	
 	private String jobLinks;
 	
+	/** To whom need to send email regarding this job */
+	private String mailTo;
+	
 	/** permanent or contract */
 	private JobType jobType;
 	
 	/** phone/email/walk in */
 	private String modeOfApply;
+	
+	private String salary;
 
     @Column(updatable = false)
     @Temporal(TemporalType.TIMESTAMP)
@@ -50,5 +56,12 @@ public class Job {
     private Date created = new Date();
 
     private boolean enable=true;
+    
+    @DBRef
+    private User createdByUser;
+    
+    @DBRef
+    private Image logo;
+    
     
 }

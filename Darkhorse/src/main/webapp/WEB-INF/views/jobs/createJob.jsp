@@ -10,12 +10,10 @@
 <div class="container">
 <div class="">
 <div class="messsage">
+<div class="clearfix"></div>
 <div style="margin-left: 250px;"><h4>Create job</h4></div>
-<c:if test="${not empty message}">
-<span class="error"></span>
-</c:if>
 </div>
-	<form:form commandName="job" name="player" id="player" class="form-horizontal">
+	<form:form commandName="job" id="job" class="form-horizontal">
 	 <form:hidden path="id" />
 	 
 	 <div class="col-sm-4">
@@ -109,6 +107,11 @@
 		<form:option value="Email">Email</form:option>
 		<form:option value="Walk in">Walk in</form:option>
 		</form:select>	 
+	 </div>
+
+ 	 <div class="col-sm-5">
+	 <label>Mail To (Email Id)</label>
+	 <form:input path="mailTo"/>
 	 </div>
 	 
 	 <div class="col-sm-5">	

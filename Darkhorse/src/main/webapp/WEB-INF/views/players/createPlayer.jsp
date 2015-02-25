@@ -10,36 +10,44 @@
 <div class="container">
 <div class="">
 <div class="messsage">
+<div class="clearfix"></div>
 <div style="margin-left: 250px;"><h4>Create player</h4></div>
-<c:if test="${not empty message}">
-<span class="error"></span>
-</c:if>
 </div>
 	<form:form commandName="player" name="player" id="player" class="form-horizontal">
 	 <form:hidden path="id" />
+	 <form:hidden path="user.id" />
 	 
 	 <div class="col-sm-4">
 	 <label>Name</label>
-	 <input type="text" name="name">
+	 <form:input path="user.name"/>
 	 </div>
 
 	 <div class="col-sm-5">
 	 <label>Email</label>
-	 <input type="text" name="email">
+	 <c:choose>
+	 <c:when test="${update eq true}">
+	 	<form:input path="user.email" />
+	 </c:when>
+	  <c:otherwise>
+	  	<form:input path="user.email"/>
+	  </c:otherwise>
+	 </c:choose>
+	 
+	 
 	 </div>
 	
 	 <div class="col-sm-4">
 	 <label>Password</label>
-	 <input type="text" name="password">
+	 <form:input path="user.passwd"/>
 	 </div>
 	
 	
 	 <div class="col-sm-5">
 	 <label>Level</label>
 		<form:select path="playerLevel">
-		<form:option value="Bigner">Bigner</form:option>
-		<form:option value="Intermediate">Intermediate</form:option>
-		<form:option value="Professionl">Professionl</form:option>
+		<c:forEach items="${playerLevels}" var="pl">
+		 <form:option value="${pl}">${pl}</form:option>
+		</c:forEach>
 		</form:select>	 
 	 </div>
 

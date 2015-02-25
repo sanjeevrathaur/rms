@@ -16,6 +16,10 @@ import org.springframework.roo.addon.json.RooJson;
 import org.springframework.roo.addon.layers.repository.mongo.RooMongoEntity;
 import org.springframework.roo.addon.tostring.RooToString;
 
+/**
+ * @author Sanjeev
+ *
+ */
 @RooJavaBean
 @RooToString
 @RooMongoEntity
@@ -30,7 +34,7 @@ public class User {
     @NotNull
     private String passwd;
 
-    private Boolean isEnabled;
+    private Boolean isEnabled = true;
 
     @Column(updatable = false)
     @Temporal(TemporalType.TIMESTAMP)
@@ -41,4 +45,7 @@ public class User {
     private List<UserRole> userRoles;
     
     private String deviceId;
+    
+    private String mobileNo;
+    
 }

@@ -18,9 +18,9 @@ import org.springframework.roo.addon.tostring.RooToString;
 @RooMongoEntity
 public class Player extends CommonFields {
 	
-	private enum PlayerLevel {
+	public enum PlayerLevel {
 		
-		Bigner,Intermediate,Professionl
+		Bigner,Intermediate,Professional
 	}
 	
 

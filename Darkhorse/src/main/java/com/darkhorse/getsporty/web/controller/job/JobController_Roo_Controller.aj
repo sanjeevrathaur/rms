@@ -101,6 +101,7 @@ privileged aspect JobController_Roo_Controller {
     void JobController.populateEditForm(Model uiModel, Job job) {
         uiModel.addAttribute("job", job);
         addDateTimeFormatPatterns(uiModel);
+        uiModel.addAttribute("users", userSvc.findAllUsers());
     }
     
     String JobController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

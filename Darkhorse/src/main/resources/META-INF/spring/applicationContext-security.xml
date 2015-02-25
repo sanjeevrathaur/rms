@@ -19,8 +19,20 @@
         <intercept-url pattern="/**" access="permitAll" />
     </http>
     <!-- Configure Authentication mechanism -->
+    
+    
+    <beans:bean id="usercontrol" class="com.darkhorse.getsporty.svc.UserDetailSvc"/>
     <authentication-manager alias="authenticationManager">
-        <!-- SHA-256 values can be produced using 'echo -n your_desired_password | sha256sum' (using normal *nix environments) -->
+       <authentication-provider user-service-ref="usercontrol">
+       <password-encoder hash="md5"/>
+        </authentication-provider>
+</authentication-manager>
+    
+    
+    <!--  Default authentication manager -->
+    
+<!--     <authentication-manager alias="authenticationManager">
+        SHA-256 values can be produced using 'echo -n your_desired_password | sha256sum' (using normal *nix environments)
         <authentication-provider>
             <password-encoder hash="sha-256" />
             <user-service>
@@ -28,5 +40,7 @@
                 <user name="user" password="04f8996da763b7a969b1028ee3007569eaf3a635486ddab211d512c85b9df8fb" authorities="ROLE_USER" />
             </user-service>
         </authentication-provider>
-    </authentication-manager>
+    </authentication-manager> -->
+    
+    
 </beans:beans>

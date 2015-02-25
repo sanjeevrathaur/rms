@@ -66,4 +66,12 @@ privileged aspect User_Roo_JavaBean {
         this.deviceId = deviceId;
     }
     
+    public String User.getMobileNo() {
+        return this.mobileNo;
+    }
+    
+    public void User.setMobileNo(String mobileNo) {
+        this.mobileNo = mobileNo;
+    }
+    
 }

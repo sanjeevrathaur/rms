@@ -12,20 +12,20 @@
 <div class="messsage">
 <div style="margin-left: 250px;"><h4>Create user</h4></div>
 <c:if test="${not empty message}">
-<span class="error"></span>
+<span class="error">${message}</span>
 </c:if>
 </div>
 	<form:form commandName="user" id="user" class="form-horizontal">
 	 <form:hidden path="id" />
 	 
 	 <div class="col-sm-4">
-	 <label>Email Id</label>
+	 <label>Email Id *</label>
 	 <form:input path="email"/>
 	 </div>
 
 	 <div class="col-sm-5">
 	 <label>Password</label>
-	 <form:input path="passwd" />
+	 <input name="passwd" type="password" />
 	 </div>
 	
 	 <div class="col-sm-4">
@@ -35,8 +35,17 @@
 
 	 <div class="col-sm-5">	
 	 <label>User Role</label>
-	 <form:select path=""></form:select>
+	 <select name="userRoless">
+	 <c:forEach items="${userRoles}" var="userRole">
+	 <option value="${userRole.id}">${userRole.code}</option>
+	 </c:forEach>
+	 </select>
 	 </div>	
+
+	 <div class="col-sm-4">
+	 <label>Mobile</label>
+	 <form:input path="mobileNo"/>
+	 </div>
 	 
 	 <div class="col-sm-5">	
 	 <label>Enable</label>

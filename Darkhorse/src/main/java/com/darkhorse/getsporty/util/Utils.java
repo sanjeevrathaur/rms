@@ -26,9 +26,14 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.commons.lang3.StringUtils;
 import org.bson.types.ObjectId;
 import org.springframework.http.HttpHeaders;
+import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.encrypt.Encryptors;
 import org.springframework.security.crypto.encrypt.TextEncryptor;
 import org.springframework.web.multipart.MultipartFile;
+
+import com.darkhorse.getsporty.domain.User;
+import com.darkhorse.getsporty.svc.UserSvc;
 
 import flexjson.JSONSerializer;
 import flexjson.transformer.CharacterTransformer;
@@ -310,5 +315,31 @@ public class Utils {
 
 	return null;
     }
+    
+    
+    public static User getCurrentLoggedInUser(UserSvc userSvc) {
+	if (getCurrentUserName() != null) {
+	    return userSvc.findByEmail(getCurrentUserName());
+	}
+	return null;
+    }
+
+    public static String getCurrentUserName() {
+	if (SecurityContextHolder.getContext().getAuthentication() != null)
+	    return SecurityContextHolder.getContext().getAuthentication().getName();
+	return null;
+    }
+
+    
+    public static String encodePassword(String password) {
+	if (!Utils.isEmpty(password)) {
+	    Md5PasswordEncoder encodePass = new Md5PasswordEncoder();
+	    password = encodePass.encodePassword(password, null);
+	}
+	return password;
+    }
+    
+    
+    
 
 }
