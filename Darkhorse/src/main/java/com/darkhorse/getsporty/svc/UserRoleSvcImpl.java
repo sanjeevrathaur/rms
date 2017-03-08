@@ -2,7 +2,7 @@ package com.darkhorse.getsporty.svc;
 
 import com.darkhorse.getsporty.domain.UserRole;
 
-
+/** test comments */
 public class UserRoleSvcImpl implements UserRoleSvc {
 	
 	public UserRole findByCode(String code){
